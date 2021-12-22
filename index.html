@@ -12,8 +12,8 @@
     <div class="todo-wrapper">
       <h2>My to-do list</h2>
       <p>Double-click an item to mark it complete.</p>
-      <form name="todo-adder">
-        <input type="text" id="todo-entry-box" />
+      <form name="todo-adder" onkeypress="return event.keyCode != 13">
+        <input type="text" id="todo-entry-box" autofocus />
       </form>
       <button id="add-button" class="pretty-button">Add</button>
       <br />
@@ -23,7 +23,6 @@
           Clear Completed
         </button>
         <button id="empty-button" class="pretty-button">Empty List</button>
-        <button id="save-button" class="pretty-button">Save List</button>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
